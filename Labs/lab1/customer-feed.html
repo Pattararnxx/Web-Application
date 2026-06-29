@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Customer Feedback Survey</h1>
+    <em>Your opinion matters to us! Please share your experience.</em>
+    <form action="/submit" method="post">
+      <br />
+      <fieldset>
+        <legend>Customer Information</legend>
+        <label for="name">Full Name *</label><br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Enter yout full name"
+        /><br /><br />
+        <label for="email">Email Address *</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="your.email@example.com"
+        /><br /><br />
+        <label for="phone">Phone Number</label><br />
+        <input
+          type="phone"
+          id="phone"
+          name="phone"
+          placeholder="+1 (555) 123-4567"
+        /><br /><br />
+        <label for="id">Customer ID</label><br />
+        <input
+          type="text"
+          id="id"
+          name="id"
+          placeholder="Enter your customer ID"
+        /><br /><br />
+      </fieldset>
+      <fieldset>
+        <legend>Service Evaluation</legend>
+        <br />
+        <label>Overall Service Rating (1-5) *</label><br />
+
+        <input type="radio" id="1" name="one" value="1" />
+        <label for="1">1 - Poor</label><br />
+        <input type="radio" id="2" name="two" value="2" />
+        <label for="1">2 - Fair</label><br />
+        <input type="radio" id="3" name="three" value="3" />
+        <label for="3">3 - Good</label><br />
+        <input type="radio" id="4" name="four" value="4" />
+        <label for="1">4 - Very Good</label><br />
+        <input type="radio" id="5" name="five" value="5" />
+        <label for="5">5 - Excellent</label><br />
+        <br />
+        <label for="category">Service Category *</label><br />
+        <select name="service" id="service">
+          <option value="" disabled selected hidden>
+            Select service category
+          </option>
+          <option value="Technical">Technical Support</option>
+          <option value="Sales">Sales</option>
+          <option value="Billing">Billing</option>
+          <option value="General">General Inquiry</option>
+        </select>
+        <br /><br />
+        <label>Would you recommend our service to others? *</label><br />
+        <input type="radio" id="yes" name="yes" value="yes" />
+        <label for="yes">Yes, definitely</label><br />
+        <input type="radio" id="maybe" name="maybe" value="maybe" />
+        <label for="maybe">Maybe</label><br />
+        <input type="radio" id="no" name="no" value="no" />
+        <label for="no">No, I would not</label><br />
+        <br />
+      </fieldset>
+      <fieldset>
+        <legend>Experience Details</legend>
+        <br />
+        <label for="visit">Visit Date</label><br />
+        <input type="date" id="visit" name="visit" /><br /><br />
+        <label>How did you hear about us? (Select all that apply)</label><br />
+        <input type="checkbox" id="social" name="social" value="socail" />
+        <label for="social">Social Media</label><br />
+        <input type="checkbox" id="friend" name="friend" value="friend" />
+        <label for="friend">Friend/Family Recommendation</label><br />
+        <input
+          type="checkbox"
+          id="advertise"
+          name="advertise"
+          value="advertise"
+        />
+        <label for="advertise"> Advertisement</label><br />
+        <input type="checkbox" id="search" name="search" value="search" />
+        <label for="search">Search Engine</label><br />
+        <input type="checkbox" id="others" name="others" value="others" />
+        <label for="others">Other</label><br /><br />
+
+        <label for="w3review">Additional Comments *</label><br />
+
+        <textarea
+          id="w3review"
+          name="w3review"
+          rows="5"
+          cols="50"
+          placeholder="Please share your detailed feedback here..."
+        ></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Contact Preferences</legend>
+        <br />
+        <label>Preferred Contact Method</label> <br />
+        <input type="radio" id="email" name="email" value="email" />
+        <label for="email">Email</label><br />
+        <input type="radio" id="phone" name="phone" value="phone" />
+        <label for="phone">Phone</label><br />
+        <input type="radio" id="sms" name="sms" value="sms" />
+        <label for="sms">SMS</label><br />
+        <input type="radio" id="postal" name="postal" value="postal" />
+        <label for="postal">Postal Mail</label><br />
+        <input type="radio" id="sms" name="sms" value="sms" />
+        <label for="sms">Do not contact me</label><br />
+        <br />
+        <label>Best Time to Contact</label><br />
+        <select name="time" id="time">
+          <option value="" disabled selected hidden>
+            Select preferred time
+          </option>
+          <option value="morning">Morning</option>
+          <option value="afternoon">Afternoon</option>
+          <option value="Evening">Evening</option>
+        </select>
+      </fieldset>
+      <br>
+      <input type="checkbox" id="agree" name="agree" value="true" />
+      <label for="agree"
+        >I confirm that all information provided is accurate *</label
+      ><br /><br>
+      <input type="submit" value="Submit Feedback" />
+      <input type="reset" value="Clear All Fields" />
+    </form>
+  </body>
+</html>
